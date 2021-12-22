@@ -11,6 +11,10 @@ echo "Testing active_record 5.0:"
 rm -f Gemfile.lock;
 BUNDLE_GEMFILE=gemfiles/Gemfile.rails-5.0 bundle > /dev/null;
 bundle exec rake;
+echo "Testing active_record 7.0:"
+rm -f Gemfile.lock;
+BUNDLE_GEMFILE=gemfiles/Gemfile.rails-7.0 bundle > /dev/null;
+bundle exec rake;
 echo "Testing mongoid:";
 rm -f Gemfile.lock;
 PA_ORM=mongoid bundle > /dev/null;
